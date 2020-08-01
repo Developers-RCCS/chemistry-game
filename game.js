@@ -172,6 +172,6 @@ function endGame() {
         level = LEVEL;
     }
     summary_container.innerHTML = "";
-    dialog_box.innerHTML = `<div class="flybox-content"><h2>${results}. You got ${POINTS} points!</h2><button onclick="location.replace(window.location.origin+'?level=${level}');">${btn}</button></div>`;
+    dialog_box.innerHTML = `<div class="flybox-content"><h2>${results}. You got ${POINTS} points!</h2><button onclick="location.replace(window.location.origin+window.location.pathname+'?level=${level}');">${btn}</button></div>`;
     slide_down();
 }
