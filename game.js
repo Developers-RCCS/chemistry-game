@@ -23,8 +23,6 @@ function slide_down() {
     }, 2);
 }
 
-
-
 var levelsInfo = {
     1: {
         "time": 40,
@@ -34,7 +32,7 @@ var levelsInfo = {
     2: {
         "time": 80,
         "points": 50,
-        "elements": data.slice(0, 50),
+        "elements": data.slice(0, 54),
     },
     3: {
         "time": 150,
@@ -147,10 +145,14 @@ function startGame() {
     }
     for (const dcard of document.querySelectorAll('.el')) {
         if (dcard.innerHTML.length <= 3) {
-            dcard.setAttribute("onclick", "dropClicked(event)")
-            dcard.setAttribute("ondrop", "onDrop(event.target, event)");
-            dcard.setAttribute("ondragover", "onOver(event.target, event)");
-            dcard.setAttribute("ondragleave", "onLeave(event.target, event)");
+            if (dcard.innerHTML <= ELEMENTS.length) {
+                dcard.setAttribute("onclick", "dropClicked(event)");
+                dcard.setAttribute("ondrop", "onDrop(event.target, event)");
+                dcard.setAttribute("ondragover", "onOver(event.target, event)");
+                dcard.setAttribute("ondragleave", "onLeave(event.target, event)");
+            } else {
+                dcard.setAttribute("style", "background:#212121;color:grey;cursor:default;");
+            }
         }
     }
     summary_container.innerHTML = new_list[0]['summary'];
