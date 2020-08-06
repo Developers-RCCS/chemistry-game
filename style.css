@@ -19,7 +19,7 @@ body{
 
 .flybox {
     position: absolute;
-    top: -50%;
+    top: -100%;
     left: 20%;
 }
 
@@ -160,4 +160,43 @@ button {
     width: 100%;
     margin: 0 0 0 60px;
     color: #2980b9;
+}
+
+.tooltip {
+    position: absolute;
+    left: 45%;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 50rem;
+    height: 30rem;
+    background-color: black;
+    background-image: url("assets/banner.jpg");
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -25rem;
+  }
+  
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }

@@ -6,14 +6,14 @@ function slide_up() {
     var x = setInterval(function() {
         var distance = start--;
         dialog_box.setAttribute("style", `top:${distance}%;`);
-        if (distance < -50) {
+        if (distance < -100) {
             clearInterval(x);
         }
     }, 2);
 }
 
 function slide_down() {
-    var start = -50;
+    var start = -100;
     var x = setInterval(function() {
         var distance = start++;
         dialog_box.setAttribute("style", `top:${distance}%;`);
@@ -26,7 +26,7 @@ function slide_down() {
 var levelsInfo = {
     1: {
         "time": 40,
-        "points": 20,
+        "points": 2,
         "elements": data.slice(0, 20),
     },
     2: {
@@ -166,7 +166,7 @@ function endGame() {
     var btn;
     if (POINTS >= TO_SCORE) {
         results = "CONGRATULATIONS!";
-        level = LEVEL+1;
+        level = parseInt(LEVEL)+1;
         btn = "Next Level";
     } else {
         results = "Better Luck Next Time!";
