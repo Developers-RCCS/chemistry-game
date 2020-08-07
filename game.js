@@ -49,7 +49,7 @@ var ELEMENTS = levelsInfo[LEVEL]["elements"];
 var points_container = document.getElementById("points");
 var card_container = document.getElementById("card_holder");
 var summary_container = document.getElementById("summary_holder");
-dialog_box.innerHTML = `<div class="flybox-content"><h2>Level ${LEVEL}, Score ${TO_SCORE} in ${SECONDS} seconds, Click start to play</h2><button onclick="startGame();">Start</button></div>`
+dialog_box.innerHTML = `<div class="flybox-content"><p align="center" color="white">Place the Element at the corresponding slot of Periodic Table</p><h2>Level ${LEVEL}, Score ${TO_SCORE} in ${SECONDS} seconds, Click start to play</h2><button onclick="startGame();">Start</button></div>`
 slide_down();
 
 function getLevel(level) {

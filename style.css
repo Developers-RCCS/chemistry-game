@@ -171,7 +171,7 @@ button {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 50rem;
-    height: 30rem;
+    height: 20rem;
     background-color: black;
     background-image: url("assets/banner.jpg");
     background-size: cover;
