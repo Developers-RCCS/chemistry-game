@@ -25,7 +25,7 @@ function slide_down() {
 
 var levelsInfo = {
     1: {
-        "time": 40,
+        "time": 80,
         "points": 20,
         "elements": data.slice(0, 20),
     },
