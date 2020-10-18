@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/kavienanj/chemistry-game/master/public/assets/banner-small.jpg" width="400" alt="Match the Element"></img>
+<img src="https://raw.githubusercontent.com/Developers-RCCS/chemistry-game/master/public/assets/banner-small.jpg" width="400" alt="Match the Element"></img>
 
 # Match the Element
 ## This is a website to improve the students knowledge in `Chemistry`. [Go to site](https://developers-rccs.github.io/chemistry-game/public/index.html).
