@@ -1,9 +1,5 @@
-## How to deploy for hosting
+<img src="https://raw.githubusercontent.com/Developers-RCCS/chemistry-game/master/public/assets/banner-small.jpg" width="400" alt="Match the Element"></img>
 
-'npm install -g firebase-tools'
-
-'firebase login'
-
-login with RCCS account
-
-'firebase deploy'
+# Match the Element
+## This is a website to improve the students knowledge in `Chemistry`. [Go to site](https://developers-rccs.github.io/chemistry-game/public/index.html).
+A Project by Chemistry Club of Royal College and Computer Society of Royal College.
