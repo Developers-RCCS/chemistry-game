@@ -72,7 +72,6 @@ function performCalc(el, value) {
     };
     document.getElementById("ca"+value).remove();
     if (card_container.childElementCount == 0 || POINTS == TO_SCORE) {
-        console.log("over");
         endGame();
     } else {
         summary_container.innerHTML = data[card_container.firstElementChild.id.slice(2)-1]['summary'];
@@ -135,6 +134,16 @@ function timer() {
 function startGame() {
     slide_up();
     //dialog_box.setAttribute("style", "display:none;");
+    var container_box = document.getElementsByClassName("container")[0];
+    var rows = document.getElementsByClassName("row");
+    if (LEVEL == 1) {
+        container_box.className += "-level-1";
+        rows[1] += "-level-1";
+        rows[2] += "-level-1";
+        rows[3] += "-level-1";
+    } else if (LEVEL == 2) {
+        container_box.className += "-level-2";
+    }
     var new_list = shuffle([...ELEMENTS]);
     for (const el of new_list) {
         card_container.appendChild(getElementCard(data.indexOf(el)+1, el['abr'], Math.round(el['atomic-mass']*100)/100, el['name']));
@@ -151,7 +160,11 @@ function startGame() {
                 dcard.setAttribute("ondragover", "onOver(event.target, event)");
                 dcard.setAttribute("ondragleave", "onLeave(event.target, event)");
             } else {
-                dcard.setAttribute("style", "background:#212121;color:grey;cursor:default;");
+                dcard.setAttribute("style", "display:none;");// "background:#212121;color:grey;cursor:default;");
+            }
+        } else {
+            if (LEVEL != 3) {
+                dcard.setAttribute("style", "display:none;");
             }
         }
     }
