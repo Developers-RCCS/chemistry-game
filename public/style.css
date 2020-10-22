@@ -42,7 +42,25 @@ body{
     margin-top: 20px;
     display:block;
     width:calc(54px * 18);
-    min-height: calc(66px * 7);
+    min-height: calc(66px * 3);
+}
+
+.container-level-1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(54px * 3);
+    display:block;
+    width:calc(54px * 8);
+    min-height: calc(66px * 4);
+}
+
+.container-level-2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    display:block;
+    width:calc(54px * 18);
+    min-height: calc(66px * 3);
 }
 
 .row{
@@ -93,6 +111,18 @@ button {
 .row2 .el:nth-child(3), .row3 .el:nth-child(3) {
     margin-left: auto;
 }
+
+.row-2-level-1 .row-3-level-1 {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row-2-level-1 .el:nth-child(3) .row-3-level-1 .el:nth-child(3) {
+    margin-left: none;
+}
+
 
 .card-container {
     align-items: center;
